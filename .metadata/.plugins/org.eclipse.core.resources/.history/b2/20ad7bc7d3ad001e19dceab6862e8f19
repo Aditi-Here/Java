@@ -1,0 +1,40 @@
+package Assignment1;
+import java.util.ArrayList;
+
+import Assignment1.Student;
+
+public class StudentCollectionManager {
+
+	ArrayList<Student> studentList = new ArrayList<>();
+
+	
+	void addStudent(Student student)
+	{
+		studentList.add(student);
+	}
+	
+	void removeStudentById(Student id)
+	{
+		studentList.remove(id);
+	}
+	void displayStudentCollection()
+	{
+		for(Student s:studentList)
+		{
+		  System.out.println(s);
+		}
+	}
+	void displayHighestGrade()
+	{
+		System.out.println("yes");
+	}
+	public static void main(String[] args)
+	{
+		Student std = new Student();
+		std.setName("Aditi");
+				
+		StudentCollectionManager scm = new StudentCollectionManager();
+		scm.addStudent(std);
+		scm.displayStudentCollection();
+	}
+}

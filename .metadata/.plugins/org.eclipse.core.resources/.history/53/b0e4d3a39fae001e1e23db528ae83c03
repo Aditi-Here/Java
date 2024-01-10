@@ -1,0 +1,10 @@
+package Assignment1;
+
+import java.util.List;
+
+public class Manager {
+	int id;
+	String name;
+	String CompanyName;
+	List<Employee> employeeList;
+}

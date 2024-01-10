@@ -1,0 +1,10 @@
+package Assignment1;
+import java.util.ArrayList;
+
+import Assignment1.*;
+
+public class MovieManager {
+	ArrayList movie = new ArrayList();
+	ArrayList actor = new ArrayList();
+	
+}

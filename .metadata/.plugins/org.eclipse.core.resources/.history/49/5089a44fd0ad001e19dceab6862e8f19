@@ -1,0 +1,46 @@
+package Assignment1;
+import java.util.ArrayList;
+public class Student {
+
+	int id;
+	String name;
+	double grade;
+	Student()
+	{
+		super();
+	}
+	public String getName()
+	{
+		return name;
+	}
+	public int getId()
+	{
+		return id;
+	}
+	public double getGrade() 
+	{
+		return grade;
+	}
+	public void setname(String newName)
+	{
+		this.name = newName;
+	}
+	public void setId(int newId)
+	{
+		this.id = newId;
+	}
+	public void setGrade(double newGrade)
+	{
+		this.grade = newGrade;
+	}
+}
+
+class StudentCollectionManager extends Student
+{
+	ArrayList<Integer> idList = new ArrayList<Integer>();
+	ArrayList<String> nameList = new ArrayList<String>();
+	ArrayList<Double> gradeList = new ArrayList<Double>();
+	
+	
+	
+}

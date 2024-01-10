@@ -1,0 +1,54 @@
+package Assignment1;
+import java.util.ArrayList;
+
+import Assignment1.*;
+
+public class MovieManager {
+	ArrayList<Movie> movie = new ArrayList();
+	ArrayList<Actor> actor = new ArrayList();
+	
+	void addMovie(Movie m)
+	{
+		movie.add(m);
+	}
+	void addActor(Actor a)
+	{
+		actor.remove(a);
+	}
+	void removeMovie(int id)
+	{
+		for(Movie m1 : movie)
+		{
+			if(m1.getMovieId()==id)
+				movie.remove(m1);
+		}
+		
+	}
+	void removeActor(int id)
+	{
+		for(Actor a1 : actor)
+		{
+			if(a1.getActorId()==id)
+				movie.remove(a1);
+		}
+	}
+	void display()
+	{
+		System.out.println(movie);
+		System.out.println(actor);
+	}
+	public static void main(String[] args)
+	{
+		Movie m1 = new Movie(1,"Shole","1/9/1990","Drama");
+		Movie m2 = new Movie(2,"Bhoot","2/9/2020","Horror");
+		Movie m3 = new Movie(3,"Raaz","3/8/2006","Suspense");
+		Movie m4 = new Movie(4,"Fukrey","4/12/2012","Comedy");
+		
+		MovieManager mv = new MovieManager();
+		mv.addMovie(m1);
+		mv.addMovie(m2);
+		mv.addMovie(m3);
+		mv.addMovie(m4);
+		mv.display();
+	}
+}

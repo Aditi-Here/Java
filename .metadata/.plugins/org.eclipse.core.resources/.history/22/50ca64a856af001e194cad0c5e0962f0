@@ -1,0 +1,9 @@
+package Assignment1;
+
+public class Movie {
+
+	int movieId;
+	String movieTitle;
+	String releaseDate;
+	String genre;
+}
