@@ -1,0 +1,13 @@
+package Jan12;
+
+public class DiamondStar {
+
+	public static void main(String[] args)
+	{
+		int N = 5;
+		for(int i=0; i<N; i++)
+		{
+			
+		}
+	}
+}

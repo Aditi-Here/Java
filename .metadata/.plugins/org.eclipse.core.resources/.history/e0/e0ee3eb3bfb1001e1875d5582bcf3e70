@@ -1,0 +1,24 @@
+package Jan12;
+
+/**
+ * 
+ */
+public class DiamondStarTest {
+	public static void main(String[] args)
+	{
+		int sum=0;
+		int a=12;
+		int b = a%10;
+		int c = a/10;
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		for(int i=a; i<a;i/=10)
+			System.out.println(i);
+			sum = i%10;
+			System.out.println(sum);
+		
+			
+	}
+		
+}

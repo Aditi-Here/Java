@@ -1,0 +1,23 @@
+package Jan12;
+
+public class RhombusSquarePattern {
+
+	public static void main(String[] args)
+	{
+		int N = 5;
+		for(int i=1; i<=N; i++)
+		{
+			for(int sp=1; sp<=i-1;sp++)
+			{
+				System.out.println("");
+			}
+			for(int j=i; j<=(N+i) ; j++)
+			{
+				
+				System.out.print("*");
+			}
+			System.out.println("");
+			System.out.print(" ");
+		}
+	}
+}

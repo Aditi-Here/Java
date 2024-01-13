@@ -50,11 +50,22 @@ public class Jan5 {
 //		}
 //	}
 //	codeforces watermelon problem
+//	public static void main(String[] args)
+//	{
+//		Scanner sc = new Scanner(System.in);
+//		
+//		int wt = sc.nextInt();
+//		System.out.println(wt >2 && wt%2==0?"yes":"No");
+//	}
+	
 	public static void main(String[] args)
 	{
-		Scanner sc = new Scanner(System.in);
-		
-		int wt = sc.nextInt();
-		System.out.println(wt >2 && wt%2==0?"yes":"No");
+	
+		int n = 18;
+		int sum=0;
+		int n1=n/10;
+		int n2= n1/10;
+		sum = n1+n2;
+		System.out.println(sum);
 	}
 }
