@@ -1,0 +1,10 @@
+package Jan22;
+import java.util.Scanner;
+
+public class CheckForPalindromeString {
+	public static void main(String[] args)
+	{
+     // reverse of the string should be same as the string itself.
+	}
+
+}

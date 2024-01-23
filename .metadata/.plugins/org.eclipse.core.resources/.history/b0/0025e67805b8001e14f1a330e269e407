@@ -1,0 +1,36 @@
+package Question2;
+import Question2.*;
+import java.util.ArrayList;
+
+public class Library {
+	
+	ArrayList<Book> bookList = new ArrayList<>();
+	
+	void addNewBookToLibrary(Book b)
+	{
+		bookList.add(b);
+	}
+	void registerNewPatron()
+	{
+		
+	}
+	void HandleBookBorrowReturn()
+	{
+		
+	}
+	void listOfBooks()
+	{
+		
+	}
+	void displayListOfPatron()
+	{
+		
+	}
+	public static void main(String[] args)
+	{
+		Library li = new Library();
+		Book b = new Book("ABC","XYZ",1);
+		li.libArr.add(Book.bookList);
+		
+	}
+}

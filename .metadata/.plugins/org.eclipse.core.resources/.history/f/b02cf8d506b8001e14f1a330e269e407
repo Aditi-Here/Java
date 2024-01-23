@@ -1,0 +1,44 @@
+package Question2;
+import Question2.*;
+import java.util.ArrayList;
+
+public class Library {
+	
+	ArrayList<Book> bookList = new ArrayList<>();
+	ArrayList<Patron> patronList = new ArrayList<>();
+	
+	void addNewBookToLibrary(Book b)
+	{
+		bookList.add(b);
+	}
+	void registerNewPatron(Patron p)
+	{
+		patronList.add(p);
+	}
+	void handleBookBorrow(Book b, Patron p)
+	{
+		bookList.remove(b);
+		p.
+		
+	}
+	void handleBookReturn()
+	{
+		
+	}
+	void listOfBooks()
+	{
+		System.out.println(bookList);
+	}
+	void displayListOfPatron()
+	{
+		System.out.println(patronList);
+	}
+	public static void main(String[] args)
+	{
+		Library li = new Library();
+		
+		Book b = new Book("ABC","XYZ",1);
+		
+		
+	}
+}

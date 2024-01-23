@@ -1,0 +1,26 @@
+package Question2;
+
+public class Patron {
+
+	String name;
+	int id;
+	Boolean booksBorrowed;
+	public Patron(String name, int id, Boolean booksBorrowed) {
+		super();
+		this.name = name;
+		this.id = id;
+		this.booksBorrowed = booksBorrowed;
+	}
+	void borrowBook()
+	{
+		
+	}
+	void returnBook()
+	{
+		
+	}
+	void displayPatronDetails()
+	{
+		
+	}
+}

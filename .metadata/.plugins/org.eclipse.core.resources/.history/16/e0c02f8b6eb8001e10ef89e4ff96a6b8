@@ -1,0 +1,118 @@
+package Question2;
+import Question2.*;
+import java.util.ArrayList;
+import java.util.List;
+
+import Assignment2.MyException;
+
+public class Library {
+	
+	private ArrayList<Book> bookList = new ArrayList<>();
+	private ArrayList<Patron> patronList = new ArrayList<>();
+	
+	void addNewBookToLibrary(Book b)
+	{
+		bookList.add(b);
+	}
+	void registerNewPatron(Patron p)
+	{
+		patronList.add(p);
+	}
+	void handleBookBorrow(Book b, Patron p) throws MyException
+	{
+		if(p.getBooksBorrowed().size()<=3)
+		{
+		bookList.remove(b);
+		p.getBooksBorrowed().add(b);
+		}
+		else
+		{
+			MyException me = new MyException("Maximum books are aleady borrowed");
+			  throw me;
+		}
+		
+	}
+	void handleBookReturn(Book b, Patron p)
+	{
+		bookList.add(b);
+		p.getBooksBorrowed().remove(b);
+	}
+	void displayListOfBooks()
+	{
+		System.out.println(bookList);
+	}
+	void displayListOfPatron()
+	{
+		System.out.println(patronList);
+	}
+	void checkBookAvailability(Book b)
+	{
+		if(bookList.contains(b))
+		{
+			System.out.println(b.getTitle()+" This book is available.");
+		}
+		else
+		{
+			System.out.println(b.getTitle() + " This book is not available");
+		}
+	}
+	public static void main(String[] args)
+	{
+		Library li = new Library();
+		
+		Book b1 = new Book("ABC","XYZ",1);
+		Book b2 = new Book("ABCd","XYZd",2);
+		Book b3 = new Book("ABCdd","XYZfgf",3);
+		Book b4 = new Book("pqr","XYZ",4);
+		Book b5 = new Book("black day","XYZd",5);
+		Book b6 = new Book("Titan","XYZfgf",6);
+		Book b7 = new Book("Miracles of the world","XYZ",7);
+		Book b8 = new Book("ABSky","Sa,",8);
+		Book b9 = new Book("Sky","Robin Sharma",9);
+		Book b10 = new Book("Ocean","Hidden",10);
+		Book b11= new Book("Soil","masavi",11);
+		Book b12 = new Book("Gray Shades","Shraddha",12);
+		Book b13 = new Book("Ship","Deepak",13);
+		Book b14 = new Book("Cargo commando","Kin Su",14);
+		Book b15 = new Book("Dynamics of life","Robert",15);
+		
+		
+		
+		
+		List<Book> booksBorrowedP1 = new ArrayList<>();
+		booksBorrowedP1.add(b15);
+		booksBorrowedP1.add(b14);
+		Patron p1 = new Patron("pqr",77,booksBorrowedP1);
+		Patron p2 = new Patron("pqrs",87);
+		Patron p3 = new Patron("pqrst",97);
+		
+		li.addNewBookToLibrary(b1);
+		li.addNewBookToLibrary(b2);
+		li.addNewBookToLibrary(b3);
+		li.addNewBookToLibrary(b4);
+		li.addNewBookToLibrary(b5);
+		li.addNewBookToLibrary(b6);
+		li.addNewBookToLibrary(b7);
+		li.addNewBookToLibrary(b8);
+		li.addNewBookToLibrary(b9);
+		li.addNewBookToLibrary(b10);
+		li.addNewBookToLibrary(b11);
+		li.addNewBookToLibrary(b12);
+		li.addNewBookToLibrary(b13);
+		
+		
+		li.registerNewPatron(p1);
+		li.handleBookBorrow(b7, p1);
+		li.handleBookBorrow(b8, p1);
+		li.handleBookBorrow(b9, p1);
+		li.handleBookBorrow(b10, p1);
+		li.handleBookBorrow(b11, p1);
+		
+		//p1.displayPatronDetails(p1);
+		System.out.println(p1.getBooksBorrowed().size());
+		
+		
+		
+		
+	}
+}

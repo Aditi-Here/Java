@@ -8,7 +8,7 @@ public class ArrayFunctions {
 		System.out.println(Arrays.equals(arr1, arr2));
 		
 		int arr3[] = arr2;
-		
+//		
 	}
 
 }

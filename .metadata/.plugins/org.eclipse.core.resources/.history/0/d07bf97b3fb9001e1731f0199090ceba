@@ -1,0 +1,9 @@
+package Jan22;
+
+public class StringBasics {
+	String str;
+	String str1 = "I like rain";
+	String str2 = new String("But I got cold easily.");
+	
+
+}

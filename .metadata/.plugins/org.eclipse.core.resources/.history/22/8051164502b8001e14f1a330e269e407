@@ -1,0 +1,24 @@
+package Question2;
+
+public class Library {
+	void addNewBookToLibrary()
+	{
+		
+	}
+	void registerNewPatron()
+	{
+		
+	}
+	void HandleBookBorrowReturn()
+	{
+		
+	}
+	void listOfBooks()
+	{
+		
+	}
+	void displayListOfPatron()
+	{
+		
+	}
+}

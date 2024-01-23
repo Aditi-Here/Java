@@ -1,0 +1,33 @@
+package Question2;
+
+import java.util.ArrayList;
+
+public class Book {
+	String title;
+	String author;
+	int isbn;
+	ArrayList<Book> bk = new ArrayList<>();
+	public Book(String title, String author, int isbn) {
+		super();
+		this.title = title;
+		this.author = author;
+		this.isbn = isbn;
+	}
+	@Override
+	public String toString() 
+	{
+		return "Book [title=" + title + ", author=" + author + ", isbn=" + isbn + "]";
+	}
+	
+	void displayBookDetails(Book b)
+	{
+		System.out.println(b);
+	}
+	
+	void checkBookAvailability(Book b)
+	{
+		
+	}
+//	Book b = new Book("ABC","XYZ",1);
+//	bk.add(b);
+}

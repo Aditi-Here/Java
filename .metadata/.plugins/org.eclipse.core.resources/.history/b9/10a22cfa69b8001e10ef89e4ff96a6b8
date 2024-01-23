@@ -1,0 +1,70 @@
+package Question2;
+import Question2.*;
+import java.util.ArrayList;
+
+public class Library {
+	
+	ArrayList<Book> bookList = new ArrayList<>();
+	ArrayList<Patron> patronList = new ArrayList<>();
+	
+	void addNewBookToLibrary(Book b)
+	{
+		bookList.add(b);
+	}
+	void registerNewPatron(Patron p)
+	{
+		patronList.add(p);
+	}
+	void handleBookBorrow(Book b, Patron p)
+	{
+		bookList.remove(b);
+		p.getBooksBorrowed().add(b);
+		
+	}
+	void handleBookReturn(Book b, Patron p)
+	{
+		bookList.add(b);
+		p.getBooksBorrowed().remove(b);
+	}
+	void displayListOfBooks()
+	{
+		System.out.println(bookList);
+	}
+	void displayListOfPatron()
+	{
+		System.out.println(patronList);
+	}
+	public static void main(String[] args)
+	{
+		Library li = new Library();
+		
+		Book b1 = new Book("ABC","XYZ",1);
+		Book b2 = new Book("ABCd","XYZd",2);
+		Book b3 = new Book("ABCdd","XYZfgf",3);
+		
+		Patron p1 = new Patron("pqr",77,false);
+		Patron p2 = new Patron("pqrs",87,false);
+		Patron p3 = new Patron("pqrst",97,false);
+		
+		li.addNewBookToLibrary(b1);
+		li.addNewBookToLibrary(b2);
+		li.addNewBookToLibrary(b3);
+		
+		li.registerNewPatron(p1);
+		li.registerNewPatron(p2);
+		li.registerNewPatron(p3);
+		
+		li.displayListOfBooks();
+		li.displayListOfPatron();
+		
+		li.handleBookBorrow(b1, p3);
+		System.out.println("Return of Book");
+		li.displayListOfBooks();
+		li.displayListOfPatron();
+		
+		b1.displayBookDetails(b3);
+		
+		
+		
+	}
+}
