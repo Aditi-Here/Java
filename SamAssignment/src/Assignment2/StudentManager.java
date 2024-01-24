@@ -1,0 +1,59 @@
+package Assignment2;
+import Assignment2.*;
+import java.util.*;
+import java.io.*;
+
+
+import java.util.ArrayList;
+
+public class StudentManager {
+	
+	ArrayList<Student> studentList = new ArrayList<>();
+	
+	void addNewStudent(String name, int age, double grade) 
+	{
+			
+		if(age<=0) {
+			throw new IllegalArgumentException("Please enter age greater than 0");
+		}
+		if(grade<0 || grade>100) {
+			throw new IllegalStateException(" Enter valid range between 0 and 100");
+		}
+		Student s = new Student(name,age,grade);
+		studentList.add(s);
+			
+	}
+	void sortStudentsByName(ArrayList arr) throws MyException
+	{
+			if((arr.size())<0)
+			{
+			  MyException me = new MyException("List is empty.");
+			  throw me;
+			}
+			Collections.sort(studentList);
+	}
+	public static void main(String[] args)
+	{
+		
+		
+		StudentManager sm = new StudentManager();
+		sm.addNewStudent("Aditi",35,8.02);
+		sm.addNewStudent("Ati",31,5.02);
+		sm.addNewStudent("Akkti",33,8.02);
+		sm.addNewStudent("Adijhkti",31,3.02);
+		sm.addNewStudent("Aditiftf",31,4.02);
+		
+		System.out.println(sm.studentList);
+		
+		try {
+			sm.sortStudentsByName(sm.studentList);
+		} catch (MyException e) {
+			
+			e.printStackTrace();
+		}
+		
+		System.out.println(sm.studentList);
+		
+		
+	}
+}
