@@ -8,7 +8,7 @@ public class Practice1 {
 		int k = sc.nextInt();
 		for(int i = 0;i<=N;i++)
 		{
-			int a=i%10;
+			int a=i%10;  // just remember that % gives you last digit.
 		}
 	}
 }
